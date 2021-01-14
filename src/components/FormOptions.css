@@ -1,12 +1,10 @@
-.body {
+.form-options {
   display: flex;
-  width: 100%;
-  height: 100%;
+  flex-direction: column;
+  width: 30%;
+  margin: auto;
+
   justify-content: center;
   align-content: center;
   align-items: center;
-}
-
-.footer {
-  border-top: 5px solid gray;
 }

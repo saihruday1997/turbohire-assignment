@@ -1,0 +1,14 @@
+.form-details {
+  margin: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.root {
+  width: 70%;
+  height: 80%;
+  border-left: 5px solid gray;
+}

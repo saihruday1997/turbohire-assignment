@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Header from "./components/Header";
+import FormOptions from "./components/FormOptions";
+import FormDetails from "./components/FormDetails";
+import Footer from "./components/Footer";
 
 function App() {
+  const [currentDetails, setCurrentDetails] = React.useState(
+    "DetailsCollection"
+  );
+
+  const changeComponent = (name) => {
+    setCurrentDetails(name);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="header">
+        <Header />
+      </div>
+      <div className="body">
+        <FormOptions
+          changeComponent={changeComponent}
+          currentComponent={currentDetails}
+        />
+        <FormDetails currentComponent={currentDetails} />
+      </div>
+      <div className="footer">
+        <Footer />
+      </div>
+    </>
   );
 }
 
